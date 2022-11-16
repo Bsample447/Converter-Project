@@ -39,6 +39,14 @@ conversions_available = [(1, '°F', '°C'),
                          (34, 'Quarts', 'Liters'),
                          (35, 'Liters', 'Gallons'),
                          (36, 'Gallons', 'Liters'),
+                         (37, 'Grams','Ounces'),
+                         (38, 'Grams', 'Ounces'),
+                         (39, 'Grams', 'Pounds'),
+                         (40, 'Pounds', 'Grams'),
+                         (41, 'Pounds', 'Ounces'),
+                         (42, 'Ounces', 'Pounds'),
+                         (43, 'Pounds', 'Kilograms'),
+                         (44, 'Kilograms', 'Pounds'),
 
 ]
 
@@ -199,4 +207,36 @@ elif conversion_number == 35:
 
 elif conversion_number == 36:
     to_value = from_value * 3.785
-    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 37:
+    to_value = from_value / 28.35
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 38:
+    to_value = from_value * 28.35
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 39:
+    to_value = from_value / 453.6
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 40:
+    to_value = from_value * 453.6
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 41:
+    to_value = from_value / 16
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 42:
+    to_value = from_value * 16
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 43:
+    to_value = from_value / 2.205
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+
+elif conversion_number == 44:
+    to_value = from_value * 2.205
+    print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
