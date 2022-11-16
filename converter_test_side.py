@@ -1,11 +1,19 @@
 print()
 print("Welcome to Brandon and Logan's Unit Converter Program")
+print("for conversions with LQ those will spesify LQ conversions")
 print()
+
 
 conversions_available = [(1, '°F', '°C'),
                          (2, '°C', '°F'),
                          (3, 'kg', 'lbs'),
                          (4, 'lbs', 'kg'),
+                         (5, 'Cups', 'fl-oz'),
+                         (6, 'fl-oz',  'cups'),
+                         (7, 'Cups', 'Tbs'),
+                         (8, 'Tbs',  'Cups'),
+                         (9, 'Cups',  'Pint'),
+                         (10, 'Pint', 'Cups'),
 ]
 
 print("Available Conversions")
@@ -38,3 +46,28 @@ elif conversion_number == 3:
 elif conversion_number == 4:
     to_value = from_value * 2.22
     print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 5:
+    to_value = from_value * 8
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}') 
+
+elif conversion_number == 6:
+    to_value = from_value / 8
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 7:
+    to_value = (from_value *16)
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 8:
+    to_value = (from_value /16)
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 9:
+    to_value = (from_value /2)
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 10:
+    to_value = (from_value *2)
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')    
+
