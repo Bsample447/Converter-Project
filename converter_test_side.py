@@ -14,6 +14,12 @@ conversions_available = [(1, '°F', '°C'),
                          (8, 'Tbs',  'Cups'),
                          (9, 'Cups',  'Pint'),
                          (10, 'Pint', 'Cups'),
+                         (11, 'Cups', 'Teaspoons' ),
+                         (12, 'Teaspoons', 'Cups'),
+                         (13, 'Cups', 'Quarts'),
+                         (14, 'Quarts', 'Cups'),
+                         (15, 'Cups', 'Gallons'),
+                         (16, 'Gallons', 'Cups'),
 ]
 
 print("Available Conversions")
@@ -71,3 +77,26 @@ elif conversion_number == 10:
     to_value = (from_value *2)
     print(f'{from_value} {from_unit} -> {to_value} {to_unit}')    
 
+elif conversion_number == 11:
+    to_value = from_value * 48
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 12:
+    to_value = from_value / 48
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 13:
+    to_value = from_value / 4
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 14:
+    to_value = from_value * 4
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 15:
+    to_value = from_value / 16
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
+
+elif conversion_number == 16:
+    to_value = from_value * 16
+    print(f'{from_value} {from_unit} -> {to_value} {to_unit}')
