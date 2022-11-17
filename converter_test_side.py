@@ -63,7 +63,10 @@ def convert_units(unitIn):
         unitOut = '°F'
     elif unitIn =='c' or unitIn == 'celsius':
         unitOut = '°C'
-    
+    elif unitIn == 'kilo' or unitIn == 'kg' or unitIn == 'KG' or unitIn == 'kg' or unitIn == 'kilos' or unitIn == 'kilograms':
+        unitOut = 'kilograms'
+    elif unitIn == 'lbs' or unitIn == 'pounds' or unitIn == 'pound'or  unitIn == 'lb':
+        unitOut = 'pounds'
 
     return unitOut
     
