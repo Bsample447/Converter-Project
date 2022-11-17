@@ -1,7 +1,7 @@
 
 print("\nWelcome to Brandon and Logan's Unit Converter Program\n") 
 print("Below is a list of all possible conversions, please enter your request as")
-print(":convert (thing 1) to (thing 2)")
+print(":convert (Thing to change) (how many / much) to (thing to change it to)")
 
 
 conversions_available = [('°F', '°C'),
@@ -90,10 +90,12 @@ while(True):
     
     
     if conversion == 1:
-      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value-32 / 1.8, to_unit))
+        to_value = (from_value - 32) / 1.8
+        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}') 
 
     elif conversion == 2:
-      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value *1.8 + 32, to_unit))
+        to_value = from_value * 1.8 + 32
+        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
 
     elif conversion == 3:
       print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value* 0.45, to_unit))
