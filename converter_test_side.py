@@ -1,7 +1,6 @@
-print()
-print("Welcome to Brandon and Logan's Unit Converter Program")
-print()
-#Test Please
+
+print("\nWelcome to Brandon and Logan's Unit Converter Program\n") 
+
 
 conversions_available = [('°F', '°C'),
                          ('°C', '°F'),
@@ -55,18 +54,39 @@ index = 1
 for from_unit, to_unit in conversions_available:
     print('{:2d}) {:14s} -> {}'.format(index,from_unit,to_unit))
     index += 1
+
+def convert_units(unitIn):
+    unitOut = unitIn
+    if unitIn == 'f' or unitIn == 'fahrenheit':
+        unitOut = '°F'
+    elif unitIn =='c' or unitIn == 'celsius':
+        unitOut = '°C'
+    
+
+    return unitOut
+    
     
 print()
 while(True):
-    conversion = input('Enter the number of the conversion to use (enter -1 to exit) --> ')
-    conversion =int(conversion) - 1
-    if conversion < 0:
+    conversion = input('What would you like to convert? (enter q to quit) --> ')
+    if conversion == 'q':
         exit()
+    conversion = conversion.split()
+    try: 
 
-    from_unit, to_unit = conversions_available[conversion]
-    print()
-    from_value = float(input(f'Enter {from_unit} --> ' ))
-    print()
+
+        from_unit = conversion[2].lower()
+        from_value = float(conversion[1])
+        to_unit = conversion[4].lower()
+
+        from_unit = convert_units(from_unit)
+        to_unit   = convert_units(to_unit)
+
+        conversion = conversions_available.index((from_unit, to_unit))+1
+    except: print("Invalid Input, Please use syntax like 'convert 32 f to c'" )
+
+    
+   
 
     
     if conversion == 1:
@@ -182,48 +202,37 @@ while(True):
         print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
 
     elif conversion == 29:
-        to_value = from_value * 4.167
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value*4.167, to_unit))
 
     elif conversion == 30:
-        to_value = from_value / 4.167
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value/ 4.167, to_unit))
 
     elif conversion == 31:
-        to_value = from_value * 2.113
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value*2.113, to_unit))
 
     elif conversion == 32:
-        to_value = from_value / 2.113
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value/ 2.113, to_unit))
 
     elif conversion == 33:
-        to_value = from_value * 1.057
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value*1.057, to_unit))
 
     elif conversion == 34:
-        to_value = from_value / 1.057
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value/1.057, to_unit))
 
     elif conversion == 35:
-        to_value = from_value / 3.785
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value /3.785, to_unit))
 
     elif conversion == 36:
-        to_value = from_value * 3.785
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+      print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value*3.785, to_unit))
 
     elif conversion == 37:
-        to_value = from_value / 28.35
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+        print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value/28.35, to_unit))
 
     elif conversion == 38:
-        to_value = from_value * 28.35
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+        print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value*28.35, to_unit))
 
     elif conversion == 39:
-        to_value = from_value / 453.6
-        print(f'{from_value} {from_unit} ( Is Equal to ) -> {to_value} {to_unit}')
+        print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value/453.6, to_unit))
 
     elif conversion == 40:
        print('{} {} ( Is Equal to ) -> {:.2f} {}'.format(from_value, from_unit, from_value*453.6, to_unit))
